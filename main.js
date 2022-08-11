@@ -82,8 +82,6 @@ const checkWinner = (playerScore, compScore) => {
     theWinner.innerText = `Looser. Computer win. Computer score ${compScore} to Your score ${playerScore}`
     updateScore(playerScore, compScore)
     result.append(theWinner)
-  }
-}
 
 
 
