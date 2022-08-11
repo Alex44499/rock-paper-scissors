@@ -3,14 +3,13 @@ const rockButton = document.querySelector('.rock')
 const paperButton = document.querySelector('.paper')
 const scissorsButton = document.querySelector('.scissors')
 
-// Score and result 
+// Score and result
 const result = document.querySelector('.result')
 const userScore = document.querySelector('.player-score')
 const pcScore = document.querySelector('.computer-score')
 
-// All buttons at once for version 2 
+// All buttons at once for version 2
 const buttons = document.querySelectorAll('button')
-
 
 let playerScore = 0
 let compScore = 0
@@ -62,13 +61,11 @@ let playerRound = (playerSelection, computerSelection) => {
   }
 }
 
-
-// Score update 
+// Score update
 const updateScore = (playerScore, compScore) => {
   userScore.innerText = `${playerScore}`
   pcScore.innerText = `${compScore}`
 }
-
 
 // Winner check*(up to 5 wins)
 const checkWinner = (playerScore, compScore) => {
@@ -82,11 +79,11 @@ const checkWinner = (playerScore, compScore) => {
     theWinner.innerText = `Looser. Computer win. Computer score ${compScore} to Your score ${playerScore}`
     updateScore(playerScore, compScore)
     result.append(theWinner)
+  }
+}
 
-
-
-// Version 2 
-// Button response to user choice 
+// Version 2
+// Button response to user choice
 buttons.forEach((button) => {
   button.addEventListener('click', () => {
     const computerSelection = computerPlay()
@@ -97,7 +94,7 @@ buttons.forEach((button) => {
   })
 })
 
-// Version 1 
+// Version 1
 
 // rockButton.addEventListener('click', () => {
 //   const computerSelection = computerPlay()
