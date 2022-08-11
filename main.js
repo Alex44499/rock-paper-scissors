@@ -55,7 +55,8 @@ let playerRound = (playerSelection, computerSelection) => {
 
 let game = () => {
   for (let i = 0; i < 5; i++) {
-    let playerSelection = prompt('Make your choice')
+    let playerSelectionAny = prompt('Make your choice')
+    let playerSelection = playerSelectionAny.toLowerCase()
     let computerSelection = computerPlay()
     playerRound(playerSelection, computerSelection)
   }
